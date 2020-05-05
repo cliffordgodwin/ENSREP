@@ -1,0 +1,212 @@
+\documentclass[11pt, hidelinks]{article}
+\usepackage[english]{babel}
+%\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage[natbibapa]{apacite} 
+\bibliographystyle{apacite}
+%\bibliographystyle{plain}
+\usepackage{url}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{subcaption}
+\usepackage{eurosym}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{parskip}
+\usepackage{fancyhdr}
+\usepackage{vmargin}
+\usepackage{afterpage}
+\usepackage{hyperref}
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+\usepackage{floatrow}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{todonotes}
+\usepackage{nomencl}
+\usepackage{booktabs}
+\usepackage{lscape}
+\renewcommand{\nomname}{\vspace{-0.08\linewidth}}
+\makenomenclature
+%Table captions above
+\usepackage{float}
+\floatstyle{plaintop}
+\restylefloat{table}
+%\usepackage[table,xcdraw]{xcolor}
+\usepackage{listings}
+%\documentclass[xcolor=table]{beamer}
+\usepackage[toc,page]{appendix}
+
+\setlist[1]{itemsep=-5pt}
+
+\setmarginsrb{3 cm}{2 cm}{3 cm}{2 cm}{1 cm}{1 cm}{1 cm}{1 cm}
+
+\title{Group 15}								% Title
+
+\date{\today}										            	% Date
+
+\makeatletter
+\let\thetitle\@title
+\let\theauthor\@author
+\let\thedate\@date
+\makeatother
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Group Project Assignment}
+\lhead{CIE4400}
+\cfoot{\thepage}
+%\setcounter{secnumdepth}{0} % sections are level 1
+
+%Matlab settings
+\usepackage{listings}
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+
+\lstset{language=Matlab,%
+    %basicstyle=\color{red},
+    frame=single,
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1},
+    keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+}
+
+\begin{document}
+\setlength{\parindent}{0cm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{titlepage}
+	\centering
+    \vspace*{0.5 cm}
+    \includegraphics[scale = 1]{Images/Front_page/TUDelft.png}	% University Logo
+     %\includegraphics[scale = 0.75]{Images/Front_page/Warmtebron_Logo.png}\\[1.0 cm] % Warmtebron logo
+    \textsc{\LARGE }\\	% University Name
+    %\textsc{\large subtitle}\\[1 cm]	
+    
+	\rule{\linewidth}{0.2 mm} \\[0.4 cm]
+	{ \huge \bfseries \thetitle}\\
+	\rule{\linewidth}{0.2 mm} \\[1.0 cm]
+	
+	\textsc{\Large CIE 4400 - Environmental Systems Modelling}\\[1 cm]
+	\textsc{\Large Group Project Assignment}\\[1 cm]
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushleft} \large
+			\emph{Authors:}\\
+			%\theauthor
+            F. Fappianno \\
+            J.J. Van den Heuvel \\
+            C.G. Sundar Navamany \\
+            
+           
+			\end{flushleft}
+			\end{minipage}~
+			\begin{minipage}{0.4\textwidth}
+			\begin{flushright} \large
+			\emph{Student Number:} \\
+		    \textcolor{red}{fill}\\
+			 \textcolor{red}{fill}\\
+			4855744\\
+			
+		\end{flushright}
+	\end{minipage}\\[2 cm]
+	
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushleft} \large
+			\emph{Supervisors:}\\
+			%\theauthor
+            Dr. S. Pande\\
+           
+			\end{flushleft}
+			\end{minipage}~
+			\begin{minipage}{0.4\textwidth}
+			\begin{flushright} \large
+			\emph{Organisation:} \\
+		    TU Delft\\
+           
+            % Your Student Number
+		\end{flushright}
+	\end{minipage}\\[2 cm]
+	
+	{\large \thedate}\\[2 cm]
+ 
+	\vfill
+	%\afterpage{\blankpage}
+	
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagenumbering{roman}
+\setcounter{page}{2}
+
+\input{Chapters/0_Summary} \newpage
+
+%\listoffigures
+%\listoftables \newpage
+\pagebreak
+\tableofcontents
+\pagebreak
+
+%\addcontentsline{toc}{section}{Summary} 
+\cleardoublepage
+%------------------------------------------------
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+
+\newpage
+%------------------------------------------------
+
+\author{Fabrizia, Clifford, Jessica}
+
+%\pagebreak
+%\newpage
+
+%Chapter input
+\input{Not_Used_EXTRA/Assessment_criteria}
+\input{Chapters/1_Background_information}
+\input{Chapters/2_Content} 
+\input{Chapters/3_Conclusion} 
+
+% REFERENCES
+\addcontentsline{toc}{section}{References}
+\setcounter{section}{0}
+\renewcommand*{\theHsection}{\text{E}.\the\value{section}}
+
+\newpage
+\bibliography{References/Bibliography.bib}
+
+\newpage
+\begin{appendices}
+\input{Appendices/A_Background}
+\end{appendices}
+
+
+\end{document}
